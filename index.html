@@ -3,34 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="CSS-File/style.css">
+  <title>Valentine special for u </title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- navbar  -->
   <div class="nav-bar js-nav--bar">
-    <div class="list js-list">
-      <a href="">HOME</a>
-      <a href="">Love Letter</a>
-      <a href="">Memories</a>
-      <a href="">Surprise</a>
+    <div class="list grid-four--cols js-list">
+      <a href="index.html" style="color: black; font-size:smaller;">Home</a>
+      <button class="js-letter" style="border: 0; font-size:large; background-color:transparent ;">Love Letter </button>
+      <button  class="js-memo" style="border: 0; font-size:large; background-color:transparent ;">Memories</button>
+      
     </div>
   </div>
+
+  <div class="js-memo--container inner-box"></div>
+  <div class="js-letter--container inner-box"></div>
   <!-- main  -->
-  <div class="main-div grid">
-    <div class="gif">
-      <img src="	https://media.tenor.com/lnI645QIjMAAAAAi/gatitos-enamorados-besos-de-amor.gif" alt="gif" width="auto" height="100%">
-    </div>
-    <div class="grid-two-cols">
-      <h3>Will You be my Valentine? </h3>
-      <p class="heart">❤️</p>
-      <br>
-    </div>
-    <div class="cutie"> <p >Cutie 😘</p></div>
-    <div class="grid grid-two-cols">
-      <button class="btn" ><a href="/HTML-File/yes.html">Yes</a></button>
-      <button class="btn"><a href="/HTML-File/no1.html">No</a></button>
-    </div>
+  <div class="page-content">
+    <div class="main-div grid">
+      <div class="gif">
+        <img src="	https://media.tenor.com/lnI645QIjMAAAAAi/gatitos-enamorados-besos-de-amor.gif" alt="gif" width="auto" height="100%">
+      </div>
+      <div class="grid-two-cols">
+        <h3>Will You be my Valentine? </h3>
+        <p class="heart">❤️</p>
+        <br>
+      </div>
+      <div class="cutie"> <p >Cutie 😘</p></div>
+      <div class="grid grid-two-cols">
+        <button class="btn" ><a href="/HTML-File/yes.html">Yes</a></button>
+        <button class="btn"><a href="/HTML-File/no1.html">No</a></button>
+      </div>
+    </div> 
   </div>
+  <script src="scripts.js" defer></script>
 </body>
 </html>
