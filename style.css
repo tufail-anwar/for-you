@@ -145,14 +145,14 @@ body {
 /* letter card */
 .js-box {
   width: 100%;
-  max-width: 420px;  
+  max-width: 650px;  
   
   background: #ffcbd2;
   padding: 20px;
   border-radius: 18px;
 
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.4rem;
 
   box-shadow: 0 12px 25px rgba(0,0,0,0.25);
 }
