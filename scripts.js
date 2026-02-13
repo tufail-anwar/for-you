@@ -32,22 +32,22 @@ memoBtn.addEventListener("click", () => {
   <div class="memory-box">
 
     <div class="memory-card ">
-      <img src="${imgPath}image1.jpeg">
+      <img src="${imgPath}WhatsApp Image 2026-02-13 at 7.32.06 PM (1).jpeg">
       <p class="p-1" >Jb hm mile the roadster mai tb ki pic hai .pic to acchi nhi hai but hmari phli kiss isi din hui thi❤️</p>
     </div>
 
     <div class="memory-card">
-      <img src="${imgPath}image2.jpeg">
+      <img src="${imgPath}image/WhatsApp Image 2026-02-13 at 7.32.06 PM.jpeg">
       <p class="p-2">Is bar jb hm aye the to app dusre resturant mai gyi saste k wjh se chle gye the. kitna chota tha nhh but bhi fir bhi appni harkatoo se baz nhi a rhe the 😂 or appne isi din mujhe phle chappar mara tha 😊</p>
     </div>
 
     <div class="memory-card">
-      <img src="${imgPath}image3.jpeg">
+      <img src="${imgPath}image/WhatsApp Image 2026-02-13 at 7.32.07 PM (1).jpeg">
       <p class="p-3">Ye tb ki pic hai .jb hm appse last bar mile the appko chorne ka mnn nhi kr rha tha .mnn kr rha pkr rkhe kahi nhi jane de 🥺</p>
     </div>
 
      <div class="memory-card">
-      <img src="${imgPath}image4.jpeg">
+      <img src="${imgPath}image/WhatsApp Image 2026-02-13 at 7.32.07 PM.jpeg">
       <p class="p-4">Inhi ankho de drten hai hmm but pyaar bhi inhi se krte hai  😘💕</p>
     </div>
 
