@@ -21,20 +21,47 @@ function moveButton() {
 }
 
 // memo
-const memories = document.querySelector('.js-memo');
+const memoBtn = document.querySelector('.js-memo');
 const memoContainer = document.querySelector('.js-memo--container');
-const pageContent = document.querySelector('.page-content');
 
-memories.addEventListener("click", () => {
+memoBtn.addEventListener("click", () => {
+  memoContainer.innerHTML = `
+  <div class="memory-box">
 
-  memoContainer.innerHTML = `<div>Hello ❤️ Our Memory 💕</div>`;
+    <div class="memory-card">
+      <img src="/image/memory-image1.jpg">
+      <p>Every day feels magical with you ❤️</p>
+    </div>
+
+    <div class="memory-card">
+      <img src="/image/memory-image2.jpg">
+      <p>Your smile is my favorite view 😊</p>
+    </div>
+
+    <div class="memory-card">
+      <img src="/image/memory-image3.jpg">
+      <p>Together forever, no matter what 💕</p>
+    </div>
+
+     <div class="memory-card">
+      <img src="/image/memory-image3.jpg">
+      <p>Together forever, no matter what 💕</p>
+    </div>
+
+  </div>
+`;
+
+
   memoContainer.classList.add("show");
   pageContent.classList.add("blur");
-
 });
+
 memoContainer.addEventListener("click", (e) => {
   if (e.target === memoContainer) {
     memoContainer.classList.remove("show");
+    pageContent.classList.remove("blur");
+  }else{
+     memoContainer.classList.remove("show");
     pageContent.classList.remove("blur");
   }
 });
@@ -42,7 +69,10 @@ memoContainer.addEventListener("click", (e) => {
 const letter=document.querySelector('.js-letter')
 const letterContainer=document.querySelector('.js-letter--container')
 letter.addEventListener("click", () => {
-  letterContainer.innerHTML=`<div>Hello ❤️ Our letter 💕</div>`;
+  letterContainer.innerHTML=`<div class="letter-box js-box">Hello! Madam jii <p>❤️Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem animi eum accusantium in voluptas totam eos ipsum dolorem perspiciatis est, inventore laborum, obcaecati vitae nesciunt ullam nemo facere suscipit dolore.
+        Numquam sequi, aut quibusdam illo mollitia beatae eveniet ab eligendi deserunt repellat voluptates dicta animi recusandae a aliquid dolore atque autem assumenda rem consequatur! Voluptate possimus fugiat autem adipisci iste!
+        Dolor minima a enim repellat? In doloribus perspiciatis eum ad magnam repellendus necessitatibus cupiditate. Dolore delectus necessitatibus eius laudantium at deserunt provident sapiente tempore a, blanditiis, adipisci maxime obcaecati repudiandae?
+        Repellat corporis molestiae aliquid atque quibusdam architecto nam rem consectetur, impedit accusantium vel debitis. Unde quis et obcaecati consectetur? Impedit omnis quis harum eum maxime animi rerum, iure nemo iusto!    💕</p>From Your Love ❤️</div>`;
   letterContainer.classList.add("show");
   pageContent.classList.add("blur");
 
@@ -50,6 +80,9 @@ letter.addEventListener("click", () => {
 
 letterContainer.addEventListener("click", (e) => {
   if (e.target === letterContainer) {
+    letterContainer.classList.remove("show");
+    pageContent.classList.remove("blur");
+  }else{
     letterContainer.classList.remove("show");
     pageContent.classList.remove("blur");
   }

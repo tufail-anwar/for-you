@@ -7,7 +7,7 @@
 
 body {
   margin-top: 0;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   background-color: #FFE4EC;
   position: relative;
 }
@@ -35,10 +35,11 @@ body {
 }
 
 .main-div {
+  
   display: grid;
   place-items: center;
   justify-content: center;
-
+  
 }
 
 /* navbar */
@@ -49,8 +50,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 
+}
+.nav-link{
+  font-size: 30px;
+  font-weight: 400;
 }
 
 .list {
@@ -71,9 +76,9 @@ body {
   padding: 12px;
   border-radius: 12px;
   border: none;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
-  min-width: 120px;
+  min-width: 140px;
 
   & a {
     text-decoration: none;
@@ -91,14 +96,16 @@ body {
 
 /* image for no button */
 .gif {
-  padding-right: 1.2rem;
-
+  padding-right: 1.8rem;
+  width:"auto" ;
+  height:"100%";
 }
 
 .cutie {
   display: grid;
   place-items: center;
   margin-bottom: .7rem;
+  font-size: 2rem;
 }
 
 .heading {
@@ -112,32 +119,61 @@ body {
   transition: left 0.25s ease, top 0.25s ease;
 }
 
-/* letter  */
-.ltr {
-  width: 100vw;
-  height: 100%;
-  display: grid;
-  place-items: center;
- 
+/*letter*/
+/* popup container */
+.js-letter--container {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease;
+  z-index: 1000;
 }
 
-.ltr .para {
-  width: 40%;
-  height: 90%;
-  background-color: rgba(252, 250, 250, 0.6) ;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-  /* margin: 4rem 10rem 4rem 1rem; */
-  display: grid;
-  place-items: center;
-  border-radius: 25px;
-  & p{
-    font-size: 0.9rem;
-    font-weight: bold;
-    font-family: "Source Sans Pro", "Arial", sans-serif;
-    text-align: center;
-    margin: 4rem 4rem 8rem 4rem;
-  }
+/* when JS adds show */
+.js-letter--container.show {
+  opacity: 1;
+  pointer-events: auto;
 }
+
+/* actual letter card */
+/* popup container */
+.inner-box {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease;
+  z-index: 1000;
+}
+
+.inner-box.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* letter card */
+.js-box {
+  width: auto;              
+  max-width: 80vw;        
+  min-width: 280px;    
+
+  background: #ffcbd2;
+  padding: 25px;
+  border-radius: 18px;
+
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+  height: auto;
+}
+
 
 /* Memories */
 .main-memo{
@@ -161,6 +197,9 @@ body {
 }
 
 /* overlay memory container */
+.page-content div p{
+  text-align: center;
+}
 .inner-box{
   position: fixed;
   inset: 0;
@@ -180,15 +219,107 @@ body {
 }
 
 /* memory card */
-.inner-box div{
-  background: pink;
-  padding: 30px;
-  border-radius: 16px;
-  font-size: 22px;
-  animation: pop .4s ease;
+.memory-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: 4rem;
+  background-color: #ffe4ec;   
+  padding: 100px 20px 100px 20px;
+  border-radius: 20px;
+
+  width: 100%;
+  max-width: 900px;
 }
 
-@keyframes pop{
-  from{transform:scale(.5);opacity:0}
-  to{transform:scale(1);opacity:1}
+.memory-card {
+  padding: 12px;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+  text-align: center;
+  
+}
+
+.memory-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.memory-card p {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #e75480;
+  
+  
+}
+
+.js-memo--container {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;  
+
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  padding: 20px;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.js-memo--container.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* Responsive */
+
+@media (max-width:500px) {
+  /* navbar  */
+  .nav-link{
+      
+    font-size: 17px;
+    font-weight: 500;
+    margin-top:7px ;
+    margin-bottom: 10px;
+    
+  }
+  .grid-two-cols{
+    & h3{
+      font-size: 25px;
+      font-weight: 450;
+    }
+  }
+  .cutie{
+    & p{
+      font-size: 22px;
+      font-weight: 300;
+    }
+  }
+  .gif{
+    padding-top: 80px;
+  }
+  .letter-box{
+    display: grid;
+    place-items: center;
+    border: 1px solid black;
+    margin-right:10px;
+    margin-left: 10px;
+    & p{
+    font-size: 19px;
+    font-weight: 400;
+    
+    }
+  }
+  .memory-box {
+
+    grid-template-columns: 1fr;
+    & .memory-card{
+      height: 33%;
+    }
+  }
 }
