@@ -25,6 +25,9 @@ const memoBtn = document.querySelector('.js-memo');
 const memoContainer = document.querySelector('.js-memo--container');
 
 memoBtn.addEventListener("click", () => {
+  const imgPath = location.pathname.includes("HTML-File")
+    ? "../image/"
+    : "image/";
   memoContainer.innerHTML = `
   <div class="memory-box">
 
@@ -34,17 +37,17 @@ memoBtn.addEventListener("click", () => {
     </div>
 
     <div class="memory-card">
-      <img src="../image/memory-image2.jpg">
+      <img src="${imgPath}memory-image3.jpg">
       <p>Your smile is my favorite view 😊</p>
     </div>
 
     <div class="memory-card">
-      <img src="../image/memory-image3.jpg">
+      <img src="${imgPath}memory-image3.jpg">
       <p>Together forever, no matter what 💕</p>
     </div>
 
      <div class="memory-card">
-      <img src="../image/memory-image3.jpg">
+      <img src="${imgPath}memory-image3.jpg">
       <p>Together forever, no matter what 💕</p>
     </div>
 
