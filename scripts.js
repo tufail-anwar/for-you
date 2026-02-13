@@ -29,22 +29,22 @@ memoBtn.addEventListener("click", () => {
   <div class="memory-box">
 
     <div class="memory-card">
-      <img src="/image/memory-image1.jpg">
+      <img src="../image/memory-image1.jpg">
       <p>Every day feels magical with you ❤️</p>
     </div>
 
     <div class="memory-card">
-      <img src="/image/memory-image2.jpg">
+      <img src="../image/memory-image2.jpg">
       <p>Your smile is my favorite view 😊</p>
     </div>
 
     <div class="memory-card">
-      <img src="/image/memory-image3.jpg">
+      <img src="../image/memory-image3.jpg">
       <p>Together forever, no matter what 💕</p>
     </div>
 
      <div class="memory-card">
-      <img src="/image/memory-image3.jpg">
+      <img src="../image/memory-image3.jpg">
       <p>Together forever, no matter what 💕</p>
     </div>
 
