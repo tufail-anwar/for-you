@@ -264,8 +264,8 @@ body {
 @media (max-width:500px) {
   /* navbar  */
   .nav-link{
-      
-    font-size: 17px;
+    line-height: 1.1;
+    font-size: 19px;
     font-weight: 500;
     margin-top:7px ;
     margin-bottom: 10px;
@@ -292,6 +292,9 @@ body {
     border: 1px solid black;
     margin-right:10px;
     margin-left: 10px;
+    font-size: 20px;
+    font-weight: 380;
+    line-height: 1.1;
     & p{
     font-size: 19px;
     font-weight: 350;
